@@ -14,7 +14,6 @@ jobs:
         run: echo $HOSTNAME
       - name: Show workspace
         run: echo $GITHUB_WORKSPACE
-      - name: Git info
       - run: git status
       - run: git branch -v
       - run: git diff --name-only 
