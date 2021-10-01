@@ -1,0 +1,9 @@
+name: Foo Action
+
+on: [push]
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo GITHUB_WORKSPACE
