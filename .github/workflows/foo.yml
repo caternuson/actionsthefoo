@@ -16,4 +16,4 @@ jobs:
         run: echo $GITHUB_WORKSPACE
       - run: git status
       - run: git branch -v
-      - run: git diff --name-only 
+      - run: git diff --name-only origin/main
