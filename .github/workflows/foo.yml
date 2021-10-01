@@ -1,6 +1,6 @@
 name: Foo Action
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   hello_world:
@@ -17,4 +17,4 @@ jobs:
       - name: Git info
       - run: git status
       - run: git branch -v
-        run: git diff --name-only 
+      - run: git diff --name-only 
