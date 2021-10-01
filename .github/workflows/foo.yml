@@ -9,13 +9,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - run: pwd
-      - run: ls -al
       - run: date
       - name: Show hostname
         run: echo $HOSTNAME
       - name: Show workspace
         run: echo $GITHUB_WORKSPACE
       - name: Git info
-        run: git status
+        run: git status --porcelain
       - name: Python test
         run: python3 foo.py
