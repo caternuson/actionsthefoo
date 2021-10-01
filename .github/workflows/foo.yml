@@ -18,4 +18,4 @@ jobs:
       - name: Git info
         run: git status
       - name: Python test
-        run: python 
+        run: python3 foo.py
