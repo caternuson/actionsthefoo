@@ -15,6 +15,6 @@ jobs:
       - name: Show workspace
         run: echo $GITHUB_WORKSPACE
       - name: Git info
-        run: git status --porcelain
-      - name: Git changes
-        run: git diff --name-only main 
+      - run: git status
+      - run: git branch -v
+        run: git diff --name-only 
