@@ -17,4 +17,4 @@ jobs:
       - name: Git info
         run: git status --porcelain
       - name: Git changes
-        run: git diff --name_only FETCH_HEAD..master
+        run: git diff --name-only main 
