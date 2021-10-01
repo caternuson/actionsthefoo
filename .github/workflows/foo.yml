@@ -6,7 +6,12 @@ jobs:
   hello_world:
     runs-on: ubuntu-18.04
     steps:
+        run: pwd
+        run: ls -al
+        run: date
       - name: Show hostname
         run: echo $HOSTNAME
       - name: Show workspace
         run: echo $GITHUB_WORKSPACE
+      - name: Git info
+        run: git status
