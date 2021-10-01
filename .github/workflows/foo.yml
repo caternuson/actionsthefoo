@@ -19,3 +19,5 @@ jobs:
       - run: git branch -v
       - run: git remote -v
       - run: git diff --name-only origin/main
+      - name: Python script
+        run: python3 foo.py
