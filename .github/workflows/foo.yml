@@ -6,4 +6,6 @@ jobs:
   hello_world:
     runs-on: ubuntu-18.04
     steps:
-      - run: echo GITHUB_WORKSPACE
+      - name: Echo Test
+      - run: echo $HOSTNAME
+      - run: echo $GITHUB_WORKSPACE
