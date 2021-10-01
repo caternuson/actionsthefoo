@@ -1,6 +1,6 @@
 name: Foo Action
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   hello_world:
@@ -15,6 +15,6 @@ jobs:
       - name: Show workspace
         run: echo $GITHUB_WORKSPACE
       - name: Git info
-        run: git status --porcelain
-      - name: Python test
-        run: python3 foo.py
+      - run: git status
+      - run: git branch -v
+      - run: git diff --name-only 
