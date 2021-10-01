@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Echo Test
-      - run: echo $HOSTNAME
-      - run: echo $GITHUB_WORKSPACE
+        run: echo $HOSTNAME
+        run: echo $GITHUB_WORKSPACE
