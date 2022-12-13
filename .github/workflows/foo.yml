@@ -11,5 +11,7 @@ jobs:
       - run: |
           date
           echo $HOSTNAME
+          echo $GITHUB_TOKEN
+          ls -alp
           git status
           git branch -v
