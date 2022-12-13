@@ -11,7 +11,8 @@ jobs:
       - run: |
           date
           echo $HOSTNAME
-          echo $GITHUB_TOKEN
+          echo ${GITHUB_ACTOR}
+          echo ${{ secrets.GITHUB_TOKEN }}
           ls -alp
           git status
           git branch -v
