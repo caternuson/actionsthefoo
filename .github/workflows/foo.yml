@@ -3,6 +3,10 @@ name: Foo Action
 on: [push, pull_request]
 
 jobs:
+  test:
+    runs-on: ubuntu-18.04
+    steps:
+      run: echo "HELLO WORLD"
   hello_world:
     runs-on: ubuntu-18.04
     steps:
@@ -17,4 +21,4 @@ jobs:
       - name: Git info
       - run: git status
       - run: git branch -v
-      - run: git diff --name-only 
+      - run: git diff --name-only
