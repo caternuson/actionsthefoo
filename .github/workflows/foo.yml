@@ -4,10 +4,9 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - name: test
-        run: echo "HELLO WORLD"
+      - run: echo "HELLO WORLD"
   hello_world:
     runs-on: ubuntu-18.04
     steps:
