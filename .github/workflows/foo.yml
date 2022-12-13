@@ -6,7 +6,8 @@ jobs:
   test:
     runs-on: ubuntu-18.04
     steps:
-      run: echo "HELLO WORLD"
+      - name: test
+        run: echo "HELLO WORLD"
   hello_world:
     runs-on: ubuntu-18.04
     steps:
