@@ -15,4 +15,12 @@ jobs:
           echo ${{ secrets.GITHUB_TOKEN }}
           ls -alp
           git status
+          git remote -v
           git branch -v
+          git checkout -b test
+          touch newfile.txt
+          git add .
+          git commit -m "add newfile"
+          git remote set-url --push origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote -v
+          git push origin test
