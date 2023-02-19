@@ -7,22 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
       - run: |
           date
           echo $HOSTNAME
-          echo ${GITHUB_ACTOR}
-          echo ${{ secrets.GITHUB_TOKEN }}
+          whoami
           ls -alp
-          git config user.name "Foo"
-          git config user.email "foo@foo.com"
-          git status
-          git remote -v
-          git branch -v
-          git checkout -b testfoo
-          touch newfile.txt
-          git add .
-          git commit -m "add newfile"
-          git remote set-url --push origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git remote -v
-          git push origin testfoo
