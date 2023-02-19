@@ -12,3 +12,8 @@ jobs:
           echo $HOSTNAME
           whoami
           ls -alp
+      - name: modify file
+        run: |
+          cat README.md
+          sed -i 's/playing/messing/' README.md
+          cat READM.md 
