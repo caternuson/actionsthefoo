@@ -16,4 +16,4 @@ jobs:
         run: |
           cat README.md
           sed -i 's/playing/messing/' README.md
-          cat READM.md 
+          cat README.md 
