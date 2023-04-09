@@ -9,10 +9,11 @@ jobs:
     name: Release Job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: |
-          date
-          echo $HOSTNAME
-          whoami
-          ls -alp
-          echo "** Release Action Test **"
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Build
+        run: ls -alp > out.txt
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: out.txt
