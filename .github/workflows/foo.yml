@@ -1,6 +1,7 @@
 name: Foo Action
 
-on: [push, pull_request]
+#on: [push, pull_request]
+on: [public]
 
 jobs:
   hello_world:
@@ -16,4 +17,4 @@ jobs:
         run: |
           cat README.md
           sed -i 's/playing/messing/' README.md
-          cat README.md 
+          cat README.md
