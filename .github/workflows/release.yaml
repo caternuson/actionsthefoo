@@ -2,7 +2,7 @@ name: Release Action Test
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   release-job:
