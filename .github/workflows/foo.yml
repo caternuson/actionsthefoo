@@ -1,20 +1,20 @@
 name: Foo Action
 
-on: [push, pull_request]
+#on: [push, pull_request]
+on: [public]
 
 jobs:
   hello_world:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - run: pwd
-      - run: date
-      - name: Show hostname
-        run: echo $HOSTNAME
-      - name: Show workspace
-        run: echo $GITHUB_WORKSPACE
-      - name: Git info
-      - run: git status
-      - run: git branch -v
-      - run: git diff --name-only 
+      - run: |
+          date
+          echo $HOSTNAME
+          whoami
+          ls -alp
+      - name: modify file
+        run: |
+          cat README.md
+          sed -i 's/playing/messing/' README.md
+          cat README.md

@@ -1,0 +1,18 @@
+name: Release Action Test
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  release-job:
+    name: Release Job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          date
+          echo $HOSTNAME
+          whoami
+          ls -alp
+          echo "** Release Action Test **"
